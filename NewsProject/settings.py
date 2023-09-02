@@ -138,8 +138,8 @@ USE_TZ = True
 #added emails
 EMAIL_HOST = 'smtp.yandex.com'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = 'Artsemlemesh1'
-EMAIL_HOST_PASSWORD = 'Artem040036'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_SSL = True
 SITE_URL = "http://127.0.0.1:8000"
 # Static files (CSS, JavaScript, Images)
