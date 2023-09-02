@@ -1,0 +1,90 @@
+{% extends 'flatpages/default.html' %}
+
+{% load custom_filters %}
+{% load custom_tags %}
+
+{% block title %}
+News
+
+{% endblock title %}
+
+{% block content %}
+   <h1 style="background-color: #3498DB; color: #ffffff;">All the news</h1>
+   <p style="color: #29ABCA;">Total news: {{ news|length }}</p>
+   <h3 style="background-color: #FFC107; color: #000000;">{% current_time '%b %d %Y' %}</h3>
+   <!-- Если в переменной next_sale будет None,
+   то выведется указанный в фильтре текст -->
+   <h3 style="color: #8FBC8F;"> {{ next_sale|default_if_none:"some news" }} </h3>
+<!--
+    <form action="" method="get">
+       {{ filterset.form.as_p }}
+       <input type="submit" value="Найти" />
+    </form>
+-->
+
+
+
+   <hr>
+   {% if news %}
+       <table class="table table-bordered table-striped table-hover">
+           <thead>
+               <tr>
+                   <th style="background-color: #3498DB; color: #ffffff;">Name</th>
+                   <th style="background-color: #FFC107; color: #000000;">Publish date</th>
+                   <th style="background-color: #8FBC8F; color: #ffffff;">Description</th>
+                   <th style="background-color: #29ABCA; color: #ffffff;">Category</th>
+                   <th style="background-color: #29ABCA; color: #ffffff;">Categories</th>
+
+               </tr>
+           </thead>
+           <tbody>
+           {% for news_single in news %}
+           <tr>
+
+               <td>{{ news_single.name|truncatewords:3 }}</td>
+               <td>{{ news_single.publish_date }}</td>
+               <td>{{ news_single.description|truncatewords:20 }}</td>
+               <td>{{ news_single.category|cat:'sci' }}</td>
+               <td>
+                   {% for category in news.category.all %}
+                    <a href = "{% url 'category_list' category.id %}">{{ category }}</a>
+                   {% endfor %}
+               </td>
+
+
+
+
+
+
+           </tr>
+           {% endfor %}
+
+       </table>
+   {% else %}
+       <h2 style="color: #29ABCA;">No news is a good news!</h2>
+   {% endif %}
+
+   {% if page_obj.has_previous %}
+
+       <a href="?{% url_replace page=1 %}">1</a>
+       {% if page_obj.previous_page_number != 1 %}
+           ...
+           <a href="?{% url_replace page=page_obj.previous_page_number %}">{{ page_obj.previous_page_number }}</a>
+       {% endif %}
+   {% endif %}
+
+
+   {{ page_obj.number }}
+
+
+   {% if page_obj.has_next %}
+       <a href="?{% url_replace page=page_obj.next_page_number %}">{{ page_obj.next_page_number }}</a>
+       {% if paginator.num_pages != page_obj.next_page_number %}
+           ...
+           <a href="?{% url_replace page=page_obj.paginator.num_pages %}">{{ page_obj.paginator.num_pages }}</a>
+       {% endif %}
+   {% endif %}
+
+{% endblock content %}
+
+
