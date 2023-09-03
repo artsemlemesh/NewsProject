@@ -29,4 +29,6 @@ urlpatterns = [
     path('', include('protect.urls')),
     path('sign/', include('sign.urls')),
 
+    path('applications/', include(('application.urls', 'applications'), namespace='applications')),
+
 ]

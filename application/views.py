@@ -8,6 +8,8 @@ from .models import Post, Category, PostCategory
 
 from django.contrib.auth.mixins import PermissionRequiredMixin
 
+
+from django.db.models.signals import post_save
 class PostList(ListView):
     model = Post
     template_name = 'posts.html'

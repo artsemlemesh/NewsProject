@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.flatpages',
     'fpages',
-    'application',
+    'application.apps.ApplicationConfig',
     'news',
     'django_filters',
 
@@ -56,7 +56,7 @@ INSTALLED_APPS = [
 #added four applications
 
 
-DEFAULT_FROM_EMAIL = 'bublikteam1@gmail.com'
+DEFAULT_FROM_EMAIL = 'Artsemlemesh1@yandex.com'
 
 SITE_ID = 1
 
