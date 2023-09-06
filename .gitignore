@@ -1,3 +1,4 @@
 *.env
 *.email
 *.password
+.env
