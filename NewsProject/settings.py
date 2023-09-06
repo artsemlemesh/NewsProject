@@ -56,7 +56,7 @@ INSTALLED_APPS = [
 #added four applications
 
 
-DEFAULT_FROM_EMAIL = 'Artsemlemesh1@yandex.com'
+
 
 SITE_ID = 1
 
@@ -138,10 +138,11 @@ USE_TZ = True
 #added emails
 EMAIL_HOST = 'smtp.yandex.com'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 EMAIL_USE_SSL = True
 SITE_URL = "http://127.0.0.1:8000"
+DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
