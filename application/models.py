@@ -2,7 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 from datetime import timezone
 
+
 from django.urls import reverse
+
 
 
 #from application.models import *
@@ -126,6 +128,8 @@ class Post(models.Model):
 class PostCategory(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+
+
 
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)

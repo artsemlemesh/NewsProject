@@ -13,7 +13,7 @@ News
         <p class="text-center"><a href="{% url 'subscribe' category.id %}" class="btn btn-secondary btn-sm"> Subscribe </a> </p>
     {% endif %}
    <h1 style="background-color: #3498DB; color: #ffffff;">All the news</h1>
-   <p style="color: #29ABCA;">Total news: {{ news|length }}</p>
+   <p style="color: #29ABCA;">Total news: {{ category_news_list|length }}</p>
    <h3 style="background-color: #FFC107; color: #000000;">{% current_time '%b %d %Y' %}</h3>
    <!-- Если в переменной next_sale будет None,
    то выведется указанный в фильтре текст -->
@@ -31,26 +31,21 @@ News
    {% if category_news_list %}
        <table class="table table-bordered table-striped table-hover">
            <thead>
-               <tr>
-                   <td>author</td>
-               </tr>
-           <tr>
-                   <td>content</td>
-           </tr>
-
-           <tr>
-                   <td>something</td>
-           </tr>
+                   <td>Author</td>
+                   <td>Title</td>
+                   <td>Content</td>
+                   <td>Category</td>
            </thead>
            <tbody>
            {% for post in category_news_list %}
            <tr>
-               <a href="{% url 'post' post.id %}"> {{ post.title }} </a>
+
                <td>{{ post.author.author }}</td>
-               <td>{{ post.content_of_article|truncatewords:20 }}</td>
+               <td><a href="{% url 'post_detail' post.id %}"> {{ post.title|capfirst }} </a></td>
+               <td>{{ post.content_of_article|truncatewords:20|capfirst }}</td>
                <td>
-                   {% for category in post.category.all %}
-                    <a href = "{% url 'category_list' category.id %}">{{ category }}</a>
+                   {% for category in post.categories.all %}
+                    <a href = "{% url 'category_list' category.id %}">{{ category|capfirst }}</a>
                    {% endfor %}
                </td>
            </tr>
