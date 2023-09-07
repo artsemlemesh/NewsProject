@@ -5,4 +5,4 @@ class ApplicationConfig(AppConfig):
     name = 'application'
 
     def ready(self):
-        import application.signals
+        from . import signals
