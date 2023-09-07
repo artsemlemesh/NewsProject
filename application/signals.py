@@ -8,18 +8,18 @@ from django.conf import settings
 from .models import PostCategory, Post
 
 
-# @receiver(m2m_changed, sender=PostCategory)
-# def notify_about_new_post(sender, instance, **kwargs):
-#     if kwargs['action'] == 'post_add':
-#         categories = instance.categories.all()
-#         subscribers: list = []
-#         for category in categories:
-#             subscribers += category.subscribers.all()
-#
-#         subscribers = [s.email for s in subscribers]
-#         print(subscribers)
-#
-#         send_notifications(instance.preview(), instance.pk, instance.title, subscribers)
+@receiver(m2m_changed, sender=PostCategory)
+def notify_about_new_post(sender, instance, **kwargs):
+    if kwargs['action'] == 'post_add':
+        categories = instance.categories.all()
+        subscribers: list = []
+        for category in categories:
+            subscribers += category.subscribers.all()
+
+        subscribers = [s.email for s in subscribers]
+        print(subscribers)
+
+        send_notifications(instance.preview(), instance.pk, instance.title, subscribers)
 
 
 # @receiver(m2m_changed, sender=Post.categories.through)
@@ -63,7 +63,7 @@ def send_notifications(preview, pk, title, subscribers):
         from_email= settings.DEFAULT_FROM_EMAIL,
         to= subscribers
     )
-
+    print(subscribers)
     msg.attach_alternative(html_content, 'text/html')
     msg.send()
 
