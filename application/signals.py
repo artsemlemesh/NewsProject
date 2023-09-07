@@ -17,10 +17,40 @@ def notify_about_new_post(sender, instance, **kwargs):
             subscribers += category.subscribers.all()
 
         subscribers = [s.email for s in subscribers]
-        print(subscribers)
-
         send_notifications(instance.preview(), instance.pk, instance.title, subscribers)
 
+def send_notifications(preview, pk, title, subscribers):
+    html_content = render_to_string(
+        'post_created_email.html',
+        {
+            'text': preview,
+            'link': f'{settings.SITE_URL}/articles/{pk}'
+        }
+    )
+
+    msg = EmailMultiAlternatives(
+        subject=title,
+        body='',
+        from_email= settings.DEFAULT_FROM_EMAIL,
+        to= subscribers
+    )
+    print(subscribers)
+    msg.attach_alternative(html_content, 'text/html')
+    msg.send()
+
+
+# @receiver(m2m_changed, sender=PostCategory)
+# def notify_about_new_post(sender, instance, **kwargs):
+#     subject = f'{instance.title} {instance.categories}'
+#     ## else:
+#     ##     subject = f'Something changed for {instance.post} {instance.category}'
+#
+#     mail_managers(
+#         subject= subject,
+#         message= instance.categories
+#
+#     )
+# m2m_changed.connect(notify_about_new_post, sender=PostCategory)
 
 # @receiver(m2m_changed, sender=Post.categories.through)
 # def notify_subscribers(instance, action, *args, **kwargs):
@@ -48,41 +78,3 @@ def notify_about_new_post(sender, instance, **kwargs):
 
 
 
-def send_notifications(preview, pk, title, subscribers):
-    html_content = render_to_string(
-        'post_created_email.html',
-        {
-            'text': preview,
-            'link': f'{settings.SITE_URL}/articles/{pk}'
-        }
-    )
-
-    msg = EmailMultiAlternatives(
-        subject=title,
-        body='',
-        from_email= settings.DEFAULT_FROM_EMAIL,
-        to= subscribers
-    )
-    print(subscribers)
-    msg.attach_alternative(html_content, 'text/html')
-    msg.send()
-
-
-
-
-
-
-
-
-@receiver(m2m_changed, sender=PostCategory)
-def notify_about_new_post(sender, instance, **kwargs):
-    subject = f'{instance.title} {instance.categories}'
-    ## else:
-    ##     subject = f'Something changed for {instance.post} {instance.category}'
-
-    mail_managers(
-        subject= subject,
-        message= instance.categories
-
-    )
-m2m_changed.connect(notify_about_new_post, sender=PostCategory)
