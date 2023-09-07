@@ -136,7 +136,7 @@ USE_I18N = True
 USE_TZ = True
 
 #added emails
-EMAIL_HOST = 'smtp.yandex.com'
+EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
@@ -145,6 +145,8 @@ SITE_URL = "http://127.0.0.1:8000"
 DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 STATIC_URL = 'static/'
 
