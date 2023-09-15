@@ -1,11 +1,11 @@
 from django.contrib.auth.models import User
 from django.core.mail import EmailMultiAlternatives, mail_managers
-from django.db.models.signals import m2m_changed, post_save
+from django.db.models.signals import m2m_changed, post_save, pre_save
 from django.dispatch import receiver
 from django.template.loader import render_to_string
 
 from django.conf import settings
-from .models import PostCategory, Post
+from .models import PostCategory, Post, Category, Comment
 
 
 @receiver(m2m_changed, sender=PostCategory)
@@ -78,3 +78,7 @@ def send_notifications(preview, pk, title, subscribers):
 
 
 
+
+
+
+#kwargs.get('pk_set') = def categories_changed(pk_set)

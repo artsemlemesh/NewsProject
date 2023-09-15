@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from datetime import timezone
-
+from django.utils import timezone
 
 from django.urls import reverse
 
@@ -99,10 +99,10 @@ class Post(models.Model):
 
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     options = models.CharField(max_length=10, choices=[('article', 'Article'), ('news', 'News')], default='article')
-    time_of_creation = models.DateTimeField(auto_now_add=True)
+    time_of_creation = models.DateTimeField(auto_now_add=True)   #auto_now_add=True
     categories = models.ManyToManyField('Category', through='PostCategory')
-    title = models.CharField(max_length=255)
-    content_of_article = models.TextField()
+    title = models.CharField(max_length=255)            #app - client_name
+    content_of_article = models.TextField()             #app - message
     rating = models.IntegerField(default=0)
 
 #added this recently
@@ -124,7 +124,7 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-
+ 
 class PostCategory(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
@@ -172,3 +172,4 @@ class Comment(models.Model):
 # comments = Comment.objects.filter(post=best_post)
 # for comment in comments:
 #     print(comment.date, comment.user.username, comment.rating, comment.comment)
+
