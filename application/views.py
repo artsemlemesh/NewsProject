@@ -1,10 +1,11 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 from email.headerregistry import Group
 from django.core.mail import send_mail
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render, redirect
 from django.urls import reverse_lazy
+from django.views import View
 
 from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView
 
@@ -13,6 +14,7 @@ from .models import Post, Category, PostCategory, Author
 
 from django.contrib.auth.mixins import PermissionRequiredMixin
 
+from .tasks import hello, printer
 
 from django.db.models.signals import post_save
 class PostList(ListView):
@@ -80,6 +82,13 @@ def subscribe(request, pk):
 
     message = 'you have successfully subscribed on category'
     return render(request, 'news/subscribe.html', {'category': category, 'message': message})
+
+
+class IndexView(View):
+    def get(self, request):
+        printer.apply_async([10], eta=datetime.now() + timedelta(seconds=2))
+        hello.delay()
+        return HttpResponse('Hello!!!!')
 
 # @login_required
 # def upgrade_me(request):
