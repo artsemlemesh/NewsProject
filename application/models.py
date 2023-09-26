@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from datetime import timezone
 from django.utils import timezone
+from django.core.cache import cache
 
 from django.urls import reverse
 
@@ -109,6 +110,10 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse('post_detail', args=[str(self.id)])
 
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        cache.delete(f'post-{self.pk}')
+
 
     def like(self):
         self.rating += 1
@@ -129,6 +134,8 @@ class PostCategory(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.post
 
 
 class Comment(models.Model):
@@ -172,4 +179,8 @@ class Comment(models.Model):
 # comments = Comment.objects.filter(post=best_post)
 # for comment in comments:
 #     print(comment.date, comment.user.username, comment.rating, comment.comment)
+
+
+
+############################################################
 

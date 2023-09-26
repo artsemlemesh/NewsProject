@@ -6,15 +6,13 @@ from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render, redirect
 from django.urls import reverse_lazy
 from django.views import View
-
 from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView
-
+from django.core.cache import cache
 from .forms import PostForm
 from .models import Post, Category, PostCategory, Author
 
 from django.contrib.auth.mixins import PermissionRequiredMixin
 
-from .tasks import hello, printer
 
 from django.db.models.signals import post_save
 class PostList(ListView):
@@ -28,6 +26,16 @@ class PostDetail(DetailView):
     model = Post
     template_name = 'post.html'
     context_object_name = 'post'
+    queryset = Post.objects.all()
+    def get_object(self, *args, **kwargs):
+        obj = cache.get(f'post-{self.kwargs["pk"]}', None)
+
+        if not obj:
+            obj = super().get_object(queryset=self.queryset)
+            cache.set(f'post-{self.kwargs["pk"]}', obj)
+            return obj
+
+
 class PostCreate(CreateView):
     form_class = PostForm
     model = Post
@@ -60,6 +68,7 @@ class CategoryListView(PostList):
         #keys = self.kwargs.keys()
         #print('THIS IS A SELF.CATEGORY', keys)# not necessary
         #print('THIS IS A QUERYSET', queryset)           # not necessary
+
         return queryset
 
 
@@ -68,6 +77,8 @@ class CategoryListView(PostList):
 
         context['is_not_subscriber'] = self.request.user not in self.category.subscribers.all()
         context['category'] = self.category
+        ###
+
         # print('CONTEXT category/', context['category'])
         # print('CONTEXT isnot sub/', context['is_not_subscriber'])
         return context
@@ -84,11 +95,11 @@ def subscribe(request, pk):
     return render(request, 'news/subscribe.html', {'category': category, 'message': message})
 
 
-class IndexView(View):
-    def get(self, request):
-        printer.apply_async([10], eta=datetime.now() + timedelta(seconds=2))
-        hello.delay()
-        return HttpResponse('Hello!!!!')
+# class IndexView(View):
+#     def get(self, request):
+#         printer.apply_async([10], eta=datetime.now() + timedelta(seconds=2))
+#         hello.delay()
+#         return HttpResponse('Hello!!!!')
 
 # @login_required
 # def upgrade_me(request):
@@ -98,4 +109,8 @@ class IndexView(View):
 #         authors_group.user_set.add(user)
 #     Author.objects.create(authorUser=user)
 #     return redirect('/')
+
+
+####################################################
+
 

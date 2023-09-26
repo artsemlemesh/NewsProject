@@ -1,8 +1,8 @@
 {% extends 'flatpages/default.html' %}
 
-{% load custom_filters %}
 
 {% block content %}
+
 
 <hr>
 <table class="table table-bordered table-striped table-hover">
@@ -12,12 +12,15 @@
       <th style="background-color: #FFC107; color: #000000;">Content</th>
       <th style="background-color: #3498DB; color: #ffffff;">Author</th>
     </tr>
+
   </thead>
   <tbody>
     <tr>
-      <td>{{ post.title }}</td>
+
+      <td>{{ post.title }} </td>
       <td>{{ post.content_of_article }}</td>
       <td>{{ post.author.author }}</td>
+
     </tr>
   </tbody>
 </table>

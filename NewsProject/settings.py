@@ -72,7 +72,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware'
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+
+
 ]
 
 ROOT_URLCONF = 'NewsProject.urls'
@@ -222,3 +224,12 @@ celery_path = os.path.join(os.path.dirname(__file__), 'celery')
 print(celery_path)
 
 #celery worker --app=NewsProject --path=/Users/mac/PycharmProjects/MyPro/NewsProject/NewsProject/celery
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': os.path.join(BASE_DIR, 'cache_files'),
+        'TIMEOUT': 300,
+        # Указываем, куда будем сохранять кэшируемые файлы! Не забываем создать папку cache_files внутри папки с manage.py!
+    }
+}
