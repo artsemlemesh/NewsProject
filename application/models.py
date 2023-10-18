@@ -15,6 +15,11 @@ class Author(models.Model):
     author = models.OneToOneField(User, on_delete=models.CASCADE)
     rating = models.IntegerField(default=0)
 
+    def __str__(self):
+        return str(self.author)
+    @property
+    def rat(self):
+        return self.rating > 1
     def update_rating(self):
 
         article_rating = sum(post.rating * 3 for post in self.post_set.all())
@@ -90,6 +95,7 @@ class Category(models.Model):
                                 unique=True)
     subscribers = models.ManyToManyField(User, blank=True, default='h', related_name='categories')
 
+
     def __str__(self):
         return self.categories
 
@@ -135,7 +141,7 @@ class PostCategory(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.post
+        return str(self.category)
 
 
 class Comment(models.Model):
@@ -145,6 +151,8 @@ class Comment(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     rating = models.IntegerField(default=0)
 
+    def __str__(self):
+        return str(self.post)
 
 # comment5 = Comment.objects.create(
 #     user = user1,

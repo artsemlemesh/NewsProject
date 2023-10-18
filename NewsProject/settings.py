@@ -50,6 +50,7 @@ INSTALLED_APPS = [
 
     'sign',
     'protect',
+
     'allauth',
     'allauth.account',
     'allauth.socialaccount',

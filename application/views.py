@@ -33,7 +33,7 @@ class PostDetail(DetailView):
         if not obj:
             obj = super().get_object(queryset=self.queryset)
             cache.set(f'post-{self.kwargs["pk"]}', obj)
-            return obj
+        return obj
 
 
 class PostCreate(CreateView):
@@ -63,9 +63,10 @@ class CategoryListView(PostList):
     context_object_name = 'category_news_list'
 
     def get_queryset(self, *args, **kwargs):
-        self.category = get_object_or_404(Category, id=self.kwargs['pk'])
+        self.category = get_object_or_404(Category, id=self.kwargs['pk'])#id reffers to the automatically created field 'id' in Category and its kwarg 'pk'
         queryset = Post.objects.filter(categories=self.category) #.order_by('-created_at')
         #keys = self.kwargs.keys()
+
         #print('THIS IS A SELF.CATEGORY', keys)# not necessary
         #print('THIS IS A QUERYSET', queryset)           # not necessary
 

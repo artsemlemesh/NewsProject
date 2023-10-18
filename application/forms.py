@@ -1,5 +1,5 @@
 from django import forms
-
+from django.forms import SelectDateWidget
 
 from .models import Post
 
@@ -10,3 +10,5 @@ class PostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ['title', 'content_of_article', 'author', 'categories']
+
+
