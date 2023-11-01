@@ -1,6 +1,6 @@
 {% extends 'flatpages/default.html' %}
 
-{% load custom_filters %}
+{% load custom_filters_app%}
 {% load custom_tags %}
 
 {% block title %}
@@ -40,7 +40,7 @@ Posts
            <tr>
 
                <td>{{ post.title | truncatewords:3 }}</td>
-               <td>{{ post.content_of_article | truncatewords:10 }}</td>
+               <td>{{ post.content_of_article | truncatewords:10 | replace_letters }}</td>
                <td>{{ post.author.author  }}</td>
            </tr>
            {% endfor %}

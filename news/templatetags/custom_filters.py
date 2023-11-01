@@ -17,7 +17,7 @@ def cat(value, code='fin'):
 
 
 
-word = ['the', 'central', 'making']#I tried, but it is still censoring only the last word in the list
+word = ['the', 'central', 'making', 'content']#I tried, but it is still censoring only the last word in the list
 
 
 @register.filter
@@ -28,3 +28,5 @@ def censor(value):
     return val
 
 #val = value.replace(w, w[0] + '*' * len(w[1:]))
+
+
