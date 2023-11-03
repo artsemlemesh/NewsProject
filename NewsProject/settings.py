@@ -234,3 +234,116 @@ CACHES = {
         # Указываем, куда будем сохранять кэшируемые файлы! Не забываем создать папку cache_files внутри папки с manage.py!
     }
 }
+#time, level of message, message, pathname, exec_info
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'style' : '{',
+    'formatters': {
+        'simple': {
+            'format': '%(levelname)s %(message)s %(asctime)s' #customized by adding asctime
+        },
+        'verbose': { # created custom formatter
+            'format': '%(asctime)s %(levelname)s %(message)s %(pathname)s'
+        },
+        'formatter_for_file_handler': { # created custom formatter
+            'format': '%(asctime)s %(levelname)s %(module)s %(message)s'
+        },
+        'formatter_for_error_critical': { # created custom formatter
+            'format': '%(asctime)s %(levelname)s %(module)s %(message)s %(exc_info)s'
+        },
+        'formatter_for_errors': {
+            'format': '%(asctime)s %(levelname)s %(message)s %(pathname)s %(exc_info)s'
+        },
+        'formatter_for_mail': {
+            'format': '%(asctime)s %(levelname)s %(message)s %(pathname)s'
+
+        }
+    },
+    'filters': {
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+        "require_debug_false": {
+            "()": "django.utils.log.RequireDebugFalse",
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'filters': ['require_debug_true'],
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
+        },
+        'mail_admins': {
+            'level': 'ERROR',
+            'filters': ['require_debug_false'],
+            'class': 'django.utils.log.AdminEmailHandler',
+            'formatter': 'formatter_for_mail',
+        },
+        'error_critical': {
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',
+            'formatter': 'formatter_for_error_critical',
+
+        },
+        'warning_and_above': { #created new handler
+            'level': 'WARNING',
+            'filters': ['require_debug_true'],
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose'
+        },
+        'file': {   #another new handler
+            'level': 'INFO',
+            'filters': ['require_debug_false'],
+            'class': 'logging.FileHandler',
+            'formatter': 'formatter_for_file_handler',
+            'filename': 'general.log'
+        },
+        'errors': {
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',
+            'filename': 'errors.log',
+            'formatter': 'formatter_for_errors',
+        },
+        'security': {
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',
+            'filename': 'security.log',
+            'formatter': 'formatter_for_file_handler'
+
+        }
+
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'warning_and_above', 'file', 'error_critical'], #added custom handlers
+            'propagate': True,
+        },
+        'django.request': {
+            'handlers': ['mail_admins', 'errors'],#added errors
+            'level': 'ERROR',
+            'propagate': False,
+        },
+        'django.server': {      #new
+            'handlers': ['mail_admins', 'errors'],
+            'level': 'ERROR',
+            'propagate': False
+        },
+        'django.template': {    #new
+            'handlers': ['errors'],
+            'level': 'ERROR',
+            'propagate': False
+        },
+        'django.db.backends': { #new
+            'handlers': ['errors'],
+            'level': 'ERROR',
+            'propagate': False
+        },
+        'django.security': { #new
+            'handlers': ['security'],
+            'level': 'ERROR',
+            'propagate': False
+        },
+    }
+}
