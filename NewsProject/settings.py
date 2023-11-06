@@ -67,6 +67,9 @@ SITE_ID = 1
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+
+    'django.middleware.locale.LocaleMiddleware',
+
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -134,9 +137,19 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
+LANGUAGES = [
+    ('en', 'English'),
+    ('ru', 'Russian')
+]
+
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
+
+LOCALE_PATHS = [          #for localization
+    os.path.join(BASE_DIR, 'locale')
+]
+
 
 USE_TZ = False #changed from True because was always gettting an error regarding the timezone
 
@@ -281,12 +294,12 @@ LOGGING = {
             'class': 'django.utils.log.AdminEmailHandler',
             'formatter': 'formatter_for_mail',
         },
-        'error_critical': {
-            'level': 'ERROR',
-            'class': 'logging.FileHandler',
-            'formatter': 'formatter_for_error_critical',
-
-        },
+        # 'error_critical': {
+        #     'level': 'ERROR',
+        #     'class': 'logging.FileHandler',
+        #     'formatter': 'formatter_for_error_critical',
+        #
+        # },
         'warning_and_above': { #created new handler
             'level': 'WARNING',
             'filters': ['require_debug_true'],
@@ -317,7 +330,7 @@ LOGGING = {
     },
     'loggers': {
         'django': {
-            'handlers': ['console', 'warning_and_above', 'file', 'error_critical'], #added custom handlers
+            'handlers': ['console', 'warning_and_above', 'file', ], #added custom handlers, removed - 'error_critical'
             'propagate': True,
         },
         'django.request': {

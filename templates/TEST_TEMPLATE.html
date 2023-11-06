@@ -1,10 +1,5 @@
-{% extends 'flatpages/default.html' %}
-
+<!DOCTYPE html>
 {% load i18n %}
-
-{% block content %}
-
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,30 +21,8 @@
         </select>
         <input type="submit" value="set">
     </form>
-
-<hr>
-<table class="table table-bordered table-striped table-hover">
-  <thead>
-    <tr>
-      <th style="background-color: #29ABCA; color: #ffffff;">{% trans 'Title' %}</th>
-      <th style="background-color: #FFC107; color: #000000;">{% trans 'Content' %}</th>
-      <th style="background-color: #3498DB; color: #ffffff;">{% trans 'Author' %}</th>
-    </tr>
-
-
-  <tbody>
-    <tr>
-
-      <td>{{ post.title }} </td>
-      <td>{{ post.content_of_article }}</td>
-      <td>{{ post.author.author }}</td>
-
-    </tr>
-  </tbody>
-</table>
-
-{% endblock content %}
-
+        {{ string }}
+        {% trans 'check4 out my new cool translation' %}
 
 </body>
 </html>

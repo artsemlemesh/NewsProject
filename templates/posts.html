@@ -1,6 +1,6 @@
 {% extends 'flatpages/default.html' %}
-
-{% load custom_filters_app%}
+{% load i18n %}
+{% load custom_filters_app %}
 {% load custom_tags %}
 
 {% block title %}
@@ -9,8 +9,8 @@ Posts
 {% endblock title %}
 
 {% block content %}
-   <h1 style="background-color: #3498DB; color: #ffffff;">All the posts</h1>
-   <p style="color: #29ABCA;">Total posts: {{ posts|length }}</p>
+   <h1 style="background-color: #3498DB; color: #ffffff;">{% trans 'All the posts' %}</h1>
+   <p style="color: #29ABCA;">{% trans 'Total posts' %} : {{ posts|length }}</p>
    <h3 style="background-color: #FFC107; color: #000000;">{% current_time '%b %d %Y' %}</h3>
    <!-- Если в переменной next_sale будет None,
    то выведется указанный в фильтре текст -->
@@ -24,15 +24,40 @@ Posts
 
 
 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="{% url 'set_language' %}" method="POST"> {% csrf_token %}
+        <input type="hidden" name="next" value="{{ redirect_to }} ">
+
+        <select name="language" id="">
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
+            {% for language in languages %}
+
+                <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected {% endif %}>
+                    {{ language.name_local }} - {{ language.code }}
+                </option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="set">
+    </form>
+
+
+
+
    <hr>
    {% if posts %}
        <table class="table table-bordered table-striped table-hover">
            <thead>
                <tr>
 
-                   <th style="background-color: #29ABCA; color: #ffffff;">Title</th>
-                   <th style="background-color: #FFC107; color: #000000;">Content</th>
-                   <th style="background-color: #29ABCA; color: #ffffff;">Author</th>
+                   <th style="background-color: #29ABCA; color: #ffffff;"> {% trans 'Title' %}</th>
+                   <th style="background-color: #FFC107; color: #000000;">{% trans 'Content' %}</th>
+                   <th style="background-color: #29ABCA; color: #ffffff;">{% trans 'Author' %}</th>
                </tr>
            </thead>
            <tbody>
@@ -44,11 +69,11 @@ Posts
                <td>{{ post.author.author  }}</td>
            </tr>
            {% endfor %}
-
        </table>
    {% else %}
        <h2 style="color: #29ABCA;">No posts!</h2>
    {% endif %}
+
 
    {% if page_obj.has_previous %}
 
@@ -73,4 +98,5 @@ Posts
 
 {% endblock content %}
 
-
+</body>
+</html>
