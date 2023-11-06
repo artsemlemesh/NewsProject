@@ -21,8 +21,10 @@
         </select>
         <input type="submit" value="set">
     </form>
-        {{ string }}
-        {% trans 'check4 out my new cool translation' %}
+    {% for model in models %}
+        {{model.title}}
+        {{model.content_of_article}}
+    {% endfor %}
 
 </body>
 </html>

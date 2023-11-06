@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Post, Author, Category, PostCategory, Comment
-
+from modeltranslation.admin import TranslationAdmin
 class AuthorAdmin(admin.ModelAdmin):
     list_display = ['author', 'rat']
 
@@ -29,7 +29,8 @@ class PostCategoryAdmin(admin.ModelAdmin):
 
 
 
-
+class PostTranslateAdmin(TranslationAdmin):
+    model = Post
 
 admin.site.register(Post, PostAdmin)
 admin.site.register(Author, AuthorAdmin)

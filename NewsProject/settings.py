@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'news',
     'django_filters',
     'django_apscheduler',
-
+    'modeltranslation',
 
     'sign',
     'protect',

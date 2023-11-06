@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-06 04:06+0000\n"
+"POT-Creation-Date: 2023-11-06 04:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,17 +32,24 @@ msgstr ""
 msgid "check4 out my new cool translation"
 msgstr "посты"
 
-#: templates/post.html:34 templates/posts.html:58
+#: templates/news/category_list.html:60 templates/post.html:36
+#: templates/posts.html:60
+msgid "Author"
+msgstr "Автор"
+
+#: templates/news/category_list.html:61 templates/post.html:34
+#: templates/posts.html:58
 msgid "Title"
 msgstr "Заглавие"
 
-#: templates/post.html:35 templates/posts.html:59
+#: templates/news/category_list.html:62 templates/post.html:35
+#: templates/posts.html:59
 msgid "Content"
 msgstr "Контент"
 
-#: templates/post.html:36 templates/posts.html:60
-msgid "Author"
-msgstr "Автор"
+#: templates/news/category_list.html:63
+msgid "Category"
+msgstr "категория"
 
 #: templates/posts.html:12
 msgid "All the posts"
