@@ -10,9 +10,13 @@ from django.views.generic import ListView, CreateView, DetailView, UpdateView, D
 from django.core.cache import cache
 from .forms import PostForm
 from .models import Post, Category, PostCategory, Author
+from django.http import  request
+from django.utils import timezone
+import pytz
+from django.utils.translation import activate, get_supported_language_variant
+from django.utils.translation import gettext as _
 
 from django.contrib.auth.mixins import PermissionRequiredMixin
-
 
 from django.db.models.signals import post_save
 class PostList(ListView):
@@ -20,6 +24,18 @@ class PostList(ListView):
     template_name = 'posts.html'
     context_object_name = 'posts'
     paginate_by = 4
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['current_time'] = timezone.now()
+        context['timezones'] = pytz.common_timezones
+        return context
+
+    def post(self, request, *args, **kwargs):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect('post_list')
+
+
 
 
 class PostDetail(DetailView):
@@ -115,16 +131,18 @@ def subscribe(request, pk):
 ####################################################
 
 
-#translate view
-
 
 class Index(View):
     def get(self, request):
+        current_time = timezone.now()
         models = Post.objects.all()
         context = {
-            'models': models
+            'models': models,
+            'current_time': timezone.now(),
+            'timezones': pytz.common_timezones
         }
-
         return HttpResponse(render(request, 'TEST_TEMPLATE.html', context))
 
-
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect('/')
