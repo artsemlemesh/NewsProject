@@ -151,7 +151,7 @@ LOCALE_PATHS = [          #for localization
 ]
 
 
-USE_TZ = False #changed from True because was always gettting an error regarding the timezone
+USE_TZ = True #changed from True because was always gettting an error regarding the timezone
 
 #added emails
 EMAIL_HOST = 'smtp.mail.ru'

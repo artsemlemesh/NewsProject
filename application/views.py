@@ -27,7 +27,7 @@ class PostList(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['current_time'] = timezone.now()
+        context['current_time'] = timezone.localtime(timezone.now())
         context['timezones'] = pytz.common_timezones
         return context
 
