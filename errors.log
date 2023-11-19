@@ -3072,3 +3072,99 @@ Traceback (most recent call last):
                  ^^^^^^^^^^^^^^^^^^
 AttributeError: 'list' object has no attribute 'values'
 2023-11-19 02:04:34,503 ERROR "GET /articles/news/ HTTP/1.1" 500 118927 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 09:33:19,666 ERROR Internal Server Error: /articles/news/40 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'RuntimeError'>, RuntimeError("You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to 127.0.0.1:8000/articles/news/40/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings."), <traceback object at 0x106311ac0>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to 127.0.0.1:8000/articles/news/40/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-11-19 09:33:19,671 ERROR "PUT /articles/news/40 HTTP/1.1" 500 68817 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 09:33:52,324 ERROR Internal Server Error: /articles/news/40 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'RuntimeError'>, RuntimeError("You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to 127.0.0.1:8000/articles/news/40/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings."), <traceback object at 0x106232900>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to 127.0.0.1:8000/articles/news/40/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-11-19 09:33:52,325 ERROR "PUT /articles/news/40 HTTP/1.1" 500 68816 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 09:34:27,037 ERROR Internal Server Error: /articles/news/40 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'RuntimeError'>, RuntimeError("You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to 127.0.0.1:8000/articles/news/40/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings."), <traceback object at 0x106231940>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to 127.0.0.1:8000/articles/news/40/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-11-19 09:34:27,038 ERROR "PUT /articles/news/40 HTTP/1.1" 500 68816 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 09:35:07,123 ERROR Internal Server Error: /articles/news/37 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'RuntimeError'>, RuntimeError("You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/articles/news/37/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings."), <traceback object at 0x10632be40>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/articles/news/37/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-11-19 09:35:07,124 ERROR "POST /articles/news/37 HTTP/1.1" 500 68831 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 09:37:02,066 ERROR Internal Server Error: /articles/news /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'RuntimeError'>, RuntimeError("You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to 127.0.0.1:8000/articles/news/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings."), <traceback object at 0x1065baa40>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to 127.0.0.1:8000/articles/news/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-11-19 09:37:02,068 ERROR "PUT /articles/news HTTP/1.1" 500 68768 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 09:39:04,044 ERROR Internal Server Error: /articles/news/40 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AssertionError'>, AssertionError("Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`"), <traceback object at 0x107dc4d40>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2023-11-19 09:39:04,047 ERROR "PUT /articles/news/40 HTTP/1.1" 500 77934 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
