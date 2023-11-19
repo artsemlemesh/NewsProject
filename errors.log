@@ -934,3 +934,2141 @@ Traceback (most recent call last):
               ^^^^^^^^^^^^^^^^^^^^^
 TypeError: BaseListView.get() missing 1 required positional argument: 'request'
 2023-11-06 07:12:34,712 ERROR "GET /articles/ HTTP/1.1" 500 75520 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 00:59:10,136 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x103f8cac0>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 00:59:10,138 ERROR "GET /articles/news/ HTTP/1.1" 500 121749 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:00:00,629 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x10426f700>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:00:00,631 ERROR "GET /articles/news/ HTTP/1.1" 500 121749 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:00:03,274 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x1042ebe80>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:00:03,276 ERROR "GET /articles/news/ HTTP/1.1" 500 121749 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:00:16,557 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x1109f4580>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:00:16,559 ERROR "GET /articles/news/ HTTP/1.1" 500 121749 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:00:27,985 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x110c26b80>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:00:27,986 ERROR "GET /articles/news/ HTTP/1.1" 500 121749 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:00:31,040 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x110c73a40>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:00:31,041 ERROR "GET /articles/news/ HTTP/1.1" 500 121749 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:00:40,183 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x10688d300>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:00:40,184 ERROR "GET /articles/news/ HTTP/1.1" 500 121749 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:00:47,416 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x105b207c0>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:00:47,419 ERROR "GET /articles/news/ HTTP/1.1" 500 121749 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:05:27,312 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x105eba800>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/serializers.py", line 16, in to_representation
+    data = super().to_representation(instance)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:05:27,314 ERROR "GET /articles/news/ HTTP/1.1" 500 125717 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:05:29,020 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x105e6b380>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/serializers.py", line 16, in to_representation
+    data = super().to_representation(instance)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:05:29,021 ERROR "GET /articles/news/ HTTP/1.1" 500 125717 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:06:50,967 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x1076f80c0>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:06:50,968 ERROR "GET /articles/news/ HTTP/1.1" 500 121749 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:06:52,142 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x107688a80>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:06:52,143 ERROR "GET /articles/news/ HTTP/1.1" 500 121749 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:11:27,841 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x1040b1300>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:11:27,842 ERROR "GET /articles/news/ HTTP/1.1" 500 121749 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:13:37,452 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x1108a7e40>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:13:37,454 ERROR "GET /articles/news/ HTTP/1.1" 500 121749 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:13:38,682 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x110908780>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:13:38,683 ERROR "GET /articles/news/ HTTP/1.1" 500 121749 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:13:40,328 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x110a81dc0>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:13:40,330 ERROR "GET /articles/news/ HTTP/1.1" 500 121749 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:26:05,598 ERROR Internal Server Error: /articles/news/1 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('rest_framework/api.html'), <traceback object at 0x1061dcd00>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 722, in render
+    template = loader.get_template(self.template)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+2023-11-19 01:26:05,600 ERROR "GET /articles/news/1 HTTP/1.1" 500 82192 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:26:09,801 ERROR Internal Server Error: /articles/news/40 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x1061462c0>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 178, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:26:09,803 ERROR "GET /articles/news/40 HTTP/1.1" 500 111428 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:26:15,986 ERROR Internal Server Error: /articles/news/49 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x106222ec0>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 178, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:26:15,987 ERROR "GET /articles/news/49 HTTP/1.1" 500 111406 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:26:26,499 ERROR Internal Server Error: /articles/news/4 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('rest_framework/api.html'), <traceback object at 0x1061a5040>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/renderers.py", line 722, in render
+    template = loader.get_template(self.template)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+2023-11-19 01:26:26,500 ERROR "GET /articles/news/4 HTTP/1.1" 500 82192 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:26:30,267 ERROR Internal Server Error: /articles/news/40 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x106145380>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 178, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:26:30,268 ERROR "GET /articles/news/40 HTTP/1.1" 500 111428 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:27:12,674 ERROR Internal Server Error: /articles/news/40 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x103ec4480>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 178, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:27:12,676 ERROR "GET /articles/news/40 HTTP/1.1" 500 111428 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:28:20,750 ERROR Internal Server Error: /articles/news/40 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AssertionError'>, AssertionError('Class PostSerializer missing "Meta" attribute'), <traceback object at 0x10771dbc0>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 178, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 1027, in get_fields
+    assert hasattr(self, 'Meta'), (
+AssertionError: Class PostSerializer missing "Meta" attribute
+2023-11-19 01:28:20,752 ERROR "GET /articles/news/40 HTTP/1.1" 500 123191 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:28:35,818 ERROR Internal Server Error: /articles/news/40 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x1084fb500>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 178, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:28:35,820 ERROR "GET /articles/news/40 HTTP/1.1" 500 111428 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:30:00,860 ERROR Internal Server Error: /articles/news/40 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x109009cc0>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 178, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:30:00,861 ERROR "GET /articles/news/40 HTTP/1.1" 500 111428 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:30:01,804 ERROR Internal Server Error: /articles/news/40 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x109051f80>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 178, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:30:01,805 ERROR "GET /articles/news/40 HTTP/1.1" 500 111428 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:30:36,408 ERROR Internal Server Error: /articles/news/40 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x10378c640>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 178, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:30:36,410 ERROR "GET /articles/news/40 HTTP/1.1" 500 111428 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:30:37,290 ERROR Internal Server Error: /articles/news/40 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x1037a8980>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 178, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:30:37,291 ERROR "GET /articles/news/40 HTTP/1.1" 500 111428 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:33:58,511 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x1036fdc40>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:33:58,513 ERROR "GET /articles/news/ HTTP/1.1" 500 121739 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:34:13,771 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x1037744c0>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:34:13,772 ERROR "GET /articles/news/ HTTP/1.1" 500 121739 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:35:29,572 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x1058d4f40>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:35:29,575 ERROR "GET /articles/news/ HTTP/1.1" 500 119979 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:35:30,962 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x105916a00>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:35:30,963 ERROR "GET /articles/news/ HTTP/1.1" 500 119979 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:36:28,158 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x10787f4c0>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:36:28,160 ERROR "GET /articles/news/ HTTP/1.1" 500 119979 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:36:29,525 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x107860140>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:36:29,526 ERROR "GET /articles/news/ HTTP/1.1" 500 119979 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:36:32,640 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x10782fcc0>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:36:32,641 ERROR "GET /articles/news/ HTTP/1.1" 500 119979 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:36:33,832 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x1078f0880>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:36:33,834 ERROR "GET /articles/news/ HTTP/1.1" 500 119979 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:37:11,427 ERROR Internal Server Error: /articles/news/40 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'application.models.Comment.DoesNotExist'>, DoesNotExist('Comment matching query does not exist.'), <traceback object at 0x10618ea80>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 172, in post_detail
+    post = Comment.objects.get(pk=pk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+application.models.Comment.DoesNotExist: Comment matching query does not exist.
+2023-11-19 01:37:11,429 ERROR "GET /articles/news/40 HTTP/1.1" 500 104562 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:37:17,863 ERROR Internal Server Error: /articles/news/1 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'application.models.Comment.DoesNotExist'>, DoesNotExist('Comment matching query does not exist.'), <traceback object at 0x1061745c0>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 172, in post_detail
+    post = Comment.objects.get(pk=pk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+application.models.Comment.DoesNotExist: Comment matching query does not exist.
+2023-11-19 01:37:17,864 ERROR "GET /articles/news/1 HTTP/1.1" 500 104535 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:38:01,855 ERROR Internal Server Error: /articles/news/2 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x106ca0ec0>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 178, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:38:01,857 ERROR "GET /articles/news/2 HTTP/1.1" 500 111547 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:40:28,433 ERROR Internal Server Error: /articles/news/2 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x1077f1540>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 178, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:40:28,434 ERROR "GET /articles/news/2 HTTP/1.1" 500 111510 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:40:32,270 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x107775a80>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:40:32,271 ERROR "GET /articles/news/ HTTP/1.1" 500 119987 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:40:36,283 ERROR Internal Server Error: /articles/news/4 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'application.models.Author.DoesNotExist'>, DoesNotExist('Author matching query does not exist.'), <traceback object at 0x1077a0b00>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 172, in post_detail
+    post = Author.objects.get(pk=pk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+application.models.Author.DoesNotExist: Author matching query does not exist.
+2023-11-19 01:40:36,286 ERROR "GET /articles/news/4 HTTP/1.1" 500 104628 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:40:39,491 ERROR Internal Server Error: /articles/news/2 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x1077d4e40>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 178, in post_detail
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:40:39,492 ERROR "GET /articles/news/2 HTTP/1.1" 500 111510 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 01:42:04,212 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x105a8bb80>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/NewsProject/application/views.py", line 159, in post_list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 01:42:04,214 ERROR "GET /articles/news/ HTTP/1.1" 500 121880 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 02:01:16,124 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x110df1900>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 02:01:16,126 ERROR "GET /articles/news/ HTTP/1.1" 500 118927 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 02:03:59,928 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x1036952c0>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 02:03:59,930 ERROR "GET /articles/news/ HTTP/1.1" 500 118786 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None
+2023-11-19 02:04:34,502 ERROR Internal Server Error: /articles/news/ /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'list' object has no attribute 'values'"), <traceback object at 0x1080adcc0>)
+Traceback (most recent call last):
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+2023-11-19 02:04:34,503 ERROR "GET /articles/news/ HTTP/1.1" 500 118927 /Users/mac/PycharmProjects/MyPro/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py None

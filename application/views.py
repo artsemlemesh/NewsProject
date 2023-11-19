@@ -9,13 +9,16 @@ from django.views import View
 from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView
 from django.core.cache import cache
 from .forms import PostForm
-from .models import Post, Category, PostCategory, Author
+from .models import Post, Category, PostCategory, Author, Comment
 from django.http import  request
 from django.utils import timezone
 import pytz
 from django.utils.translation import activate, get_supported_language_variant
 from django.utils.translation import gettext as _
-
+from .serializers import PostSerializer
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework import status, viewsets
 from django.contrib.auth.mixins import PermissionRequiredMixin
 
 from django.db.models.signals import post_save
@@ -146,3 +149,34 @@ class Index(View):
     def post(self, request):
         request.session['django_timezone'] = request.POST['timezone']
         return redirect('/')
+
+#
+# @api_view(['GET', 'POST'])
+# def post_list(request):
+#     if request.method == 'GET':
+#         post = Post.objects.all()
+#         serializer = PostSerializer(post, many=True)
+#         return Response(serializer.data)
+#
+#
+#     if request.method == 'POST':
+#         serializer = PostSerializer(data=request.data)
+#         if serializer.is_valid():
+#             serializer.save()
+#             return Response(serializer.data, status=status.HTTP_201_CREATED)
+#
+#
+# @api_view(['GET', 'PUT', 'DELETE'])
+# def post_detail(request, pk):
+#     try:
+#         post = Post.objects.get(pk=pk)
+#     except Post.DoesNotExist:
+#         return Response(status=status.HTTP_404_NOT_FOUND)
+#
+#     if request.method == 'GET':
+#         serializer = PostSerializer(post)
+#         return Response(serializer.data)
+
+class NewsViewset(viewsets.ModelViewSet):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer

@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django_filters',
     'django_apscheduler',
     'modeltranslation',
+    'rest_framework',
 
     'sign',
     'protect',
